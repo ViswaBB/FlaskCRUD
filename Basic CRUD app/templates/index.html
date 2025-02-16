@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+
+{%block head%}
+{%endblock%}
+
+
+{%block body%}
+<div class ="content">
+    <h1>The ToDo App</h1>
+    <h1>Get things done</h1>
+    {%if tasks|length < 1%}
+        <h3>No Pending Tasks,Create one</h3>
+    {%else%} 
+    <h2> Enter the task that you want to get done:-</h2>
+    <table>
+        <tr>
+            <th>List of Tasks</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+        {%for task in tasks%}
+            <tr>
+                <td>{{task.content}}</td>
+                <td>{{task.created.strftime("%d-%m")}}</td>
+                <td><a href="/delete/{{task.id}}">Completed✔️</a>
+                <br> <a href="/update/{{task.id}}">Edit📝</a>
+                </td>
+            </tr>
+        {%endfor%}  
+    </table>
+    {%endif%}
+    <form action="/" method = "POST" >
+        <input type="text" name ="content" id="content"/>
+        <input type ="submit" value ="Add task" id="button add"/>
+    
+    </form>
+    </div>
+{% endblock%}

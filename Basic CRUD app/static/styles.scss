@@ -1,0 +1,141 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #f4f4f4;
+$text-color: #333;
+$border-color: #ddd;
+$button-color: #e74c3c;
+
+// Base styles
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// Header
+h1 {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+// Table styles
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid $border-color;
+  }
+
+  th {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  tr:hover {
+    background-color: darken($background-color, 5%);
+  }
+}
+
+// Form styles
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: $secondary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+// Button styles
+a {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+
+  &.delete {
+    background-color: $button-color;
+
+    &:hover {
+      background-color: darken($button-color, 10%);
+    }
+  }
+
+  &.update {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Update form styles
+.update-form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+
+  input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

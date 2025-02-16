@@ -1,0 +1,148 @@
+/* Modernized Variables */
+:root {
+  --primary-color: #6c5ce7;
+  --primary-dark: #4834d4;
+  --secondary-color: hsl(39, 68%, 63%);
+  --secondary-dark: #e1b12c;
+  --background-color: #696464;
+  --text-color: #2d3436;
+  --border-color: #b2bec3;
+  --button-color: #e17055;
+  --button-dark: #d63031;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/638770ac54a788571cae658a_Webflow%20Blog%20Header%20-%20Desktop%201%20(1).png') no-repeat center center/cover;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto 0 auto;
+  padding: 20px;
+  background: rgba(198, 188, 188, 0.8);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+/* Content Styling */
+.content {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--secondary-color);
+}
+
+h3 {
+  color: var(--button-color);
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0px 2px 6px var(--shadow-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+table tr:hover {
+  background-color: #dfe6e9;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  width: 80%;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: inset 0px 2px 4px var(--shadow-color);
+}
+
+form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--secondary-dark);
+}
+
+/* Button styles */
+.button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+  border: none;
+}
+
+.button.delete {
+  background-color: var(--button-color);
+}
+
+.button.delete:hover {
+  background-color: var(--button-dark);
+}
+
+.button.update {
+  background-color: var(--primary-color);
+}
+
+.button.update:hover {
+  background-color: var(--primary-dark);
+}
